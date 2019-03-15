@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=LliureX LTSP XRANDR_COMMANDS 
+Comment=Launch LTSP xrandr commands
+Comment[qcv]=Executa els comandos xrandr_commands en els clients LTSP
+Comment[es]=Ejecuta los comandos xrandr en los clientes LTSP
+Exec=/usr/bin/llx-ltsp-xrandr
+Terminal=false
+Type=Application
+Categories=Utility;
+GenericName=LliureX LTSP XRANDR_COMMANDS

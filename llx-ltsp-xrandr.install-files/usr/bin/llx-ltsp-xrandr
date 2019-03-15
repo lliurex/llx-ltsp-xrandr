@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [ "$LTSP_FATCLIENT" = "true" ]; then
+
+	[ -e /var/cache/ltsp/ltsp_config_env ] || exit 0
+
+	while read line
+	do 
+	   xrandr_command=$(echo "$line")
+	   line=$(echo $xrandr_command | grep ^XRANDR_COMMAND_[0-9] | cut -d '=' -f 2 | sed 's/"//g')
+	   if [ -n "$line" ]; then
+		$line || true
+		echo "-"$line"-"
+	   fi
+	done < /var/cache/ltsp/ltsp_config_env
+fi
+
+if [ "$LTSP_FATCLIENT" = "false" ]; then
+
+	nc -w 5 $LTSP_CLIENT 1025 > "/tmp/.$USER.xrandr"
+	while read line
+        do
+           xrandr_command=$(echo "$line")
+           line=$(echo $xrandr_command | grep ^XRANDR_COMMAND_[0-9] | cut -d '=' -f 2 | sed 's/"//g')
+           if [ -n "$line" ]; then
+                $line || true
+                echo "-"$line"-"
+           fi
+        done < "/tmp/.$USER.xrandr"
+	rm -rf "/tmp/.$USER.xrand" 
+
+fi
+
+exit 0
+
+

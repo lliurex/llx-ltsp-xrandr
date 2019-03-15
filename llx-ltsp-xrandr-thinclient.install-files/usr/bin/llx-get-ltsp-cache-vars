@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -e "/var/cache/ltsp/ltsp_config_env" ]; then
+
+	cat /var/cache/ltsp/ltsp_config_env
+
+fi
+
+exit 0
+
