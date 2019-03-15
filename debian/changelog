@@ -1,0 +1,29 @@
+llx-ltsp-xrandr (0.5) bionic; urgency=medium
+
+  * Initial bionic release
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Fri, 15 Mar 2019 09:42:42 +0100
+
+llx-ltsp-xrandr (0.4) xenial; urgency=high
+
+  * First xenial release
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 29 Mar 2016 16:02:08 +0200
+
+llx-ltsp-xrandr (0.3) trusty; urgency=high
+
+  * Added netcat for thin clients
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 26 Jan 2016 12:36:13 +0100
+
+llx-ltsp-xrandr (0.2) trusty; urgency=high
+
+  * Adding file test before executing anything
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 15 Jan 2016 13:26:28 +0100
+
+llx-ltsp-xrandr (0.1) precise; urgency=high
+
+  * Initial release.
+
+ -- Daniel Duran Vecino <daduve@gmail.com>  Thu, 14 Jan 2016 12:46:16 +0200
